@@ -33,7 +33,8 @@ class TradingDashboard extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(12.0),
         children: [
-          _buildHeaderRow('BTCUSD', '1D', '64,230.50', isBullish: true),
+          // Updated to XAUUSD with a realistic Gold price
+          _buildHeaderRow('XAUUSD', '1D', '2,345.50', isBullish: true),
           const SizedBox(height: 12),
           
           _buildSectionHeader('▶ DIRECTION'),
@@ -53,8 +54,9 @@ class TradingDashboard extends StatelessWidget {
           _buildSectionHeader('▶ REGIME & VOLATILITY'),
           _buildDataRow('Regime', 'TREND ▲', 'ADX 28.5', cBull, cCyan),
           _buildDataRow('Vol Regime', 'HIGH 🔥', '1.45x', cOrange, cCyan),
-          _buildDataRow('VWAP', '▲ ABOVE', '63,100.20', cBull, cMuted),
-          _buildDataRow('ATR/Mult', '1,250.0 | x2.0', 'Medium', cCyan, cOrange),
+          // Adjusted VWAP and ATR for typical XAUUSD values
+          _buildDataRow('VWAP', '▲ ABOVE', '2,340.20', cBull, cMuted),
+          _buildDataRow('ATR/Mult', '15.5 | x2.0', 'Medium', cCyan, cOrange),
           const SizedBox(height: 12),
 
           _buildSectionHeader('▶ VOLUME DELTA'),
